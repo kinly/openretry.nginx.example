@@ -37,6 +37,9 @@ WantedBy=multi-user.target
 ``` bash
 systemctl start|stop|restart|reload openresty
 ```
+- 报错
+  `systemd[1]: PID file /data/soft/openresty/nginx.pid not readable (yet?) after start. `
+  可能是 service 配置的 PIDFile 和 nginx.conf 的不一样，或者是 nginx.conf 用的用户没有示例 /data/soft/openresty 的读写权限
 
 ## 配置
 ### nginx.conf
